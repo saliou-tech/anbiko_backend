@@ -5,10 +5,10 @@ spring:
   main:
     allow-circular-references: true
   datasource:
-    url: jdbc:mysql://https:anbiko.ck0v6xlqnxab.us-east-1.rds.amazonaws.com:3306/anbiko
+    url: jdbc:mysql://localhost:3306/anbiko
 #    url: jdbc:mysql://localhost:3306/anbiko_DB
-    username: admin
-    password: saliouanbiko
+    username: root
+    password: SSGtech@778169145
     # Enables execution of data-mysql.sql script
 
     # Not required as we dont need to initialize dummy data in persistant database
