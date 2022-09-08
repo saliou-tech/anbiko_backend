@@ -28,7 +28,7 @@ public class MembreServiceImpl implements MembreService {
         Optional<Membre> membreExist =membrerepository.findByTelephone(membre.getTelephone());
 
         if(!membreExist.isEmpty()){
-           throw new RuntimeException("ce membre avec ce numero" +membreExist.get().getTelephone()+"existe deja");
+           throw new RuntimeException("Le numéro " +" " +membreExist.get().getTelephone()+ " existe déja");
         }else{
              return  membrerepository.save(membre);
         }

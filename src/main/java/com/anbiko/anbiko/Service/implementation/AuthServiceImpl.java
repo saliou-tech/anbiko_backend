@@ -80,9 +80,9 @@ public class AuthServiceImpl implements AuthService {
     @Transactional(readOnly = true)
     public User findUserByCredentials(String username, String password) {
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new InvalidCredentialException("username", "User " + username + " doesn't exist"));
+                .orElseThrow(() -> new InvalidCredentialException("l'utilisateur", " " + username + " n'existe pas veuillez reéssayer"));
 
-        if (!passwordEncoder.matches(password, user.getPassword())) throw new InvalidCredentialException("password", "Invalid Password");
+        if (!passwordEncoder.matches(password, user.getPassword())) throw new InvalidCredentialException("password", "Mot de passe incorrecte");
         return user;
     }
 
